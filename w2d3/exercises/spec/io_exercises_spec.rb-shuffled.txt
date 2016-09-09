@@ -1,0 +1,130 @@
+    expect(answers.uniq.length).to be > 1
+
+  it "should print out the number of guesses" do
+
+
+
+  end
+end
+  def num_guesses
+
+    $stdout = STDOUT
+    end
+    guesses.index(gets.to_i)
+  it "should choose a number between 1 and 100" do
+      $stdin.string = "0\n"
+      guessing_game
+class NoMoreInput < StandardError
+  let(:guesses) { (1..100).to_a.shuffle }
+
+    guessing_game!
+    def guessing_game!
+    guesses[guesses.index(gets.to_i) - 1]
+    100
+    $stdin.string = guesses.join("\n")
+    $stdin.string = guesses.join("\n")
+
+    $stdin.string << "7\n"
+  end
+      end
+      result = $stdin.gets
+      rescue NoMoreInput
+    end
+
+
+require 'stringio'
+end
+        expect($stdout.string).to match (/too low/)
+      outputs = $stdout.string.split("\n")
+  it "should indicate too low" do
+
+  it "shouldn't choose 0" do
+      $stdin.string = guesses.join("\n")
+require 'byebug'
+      rescue NoMoreInput
+
+    end
+    end
+      result
+    def recent_output
+
+
+      begin
+
+      outputs[-max..-1].join(' ')
+      end
+    end
+  end
+      answers << answer
+  it "should not choose the same number every time" do
+  after :all do
+  it "should print out the correctly guessed number" do
+    guessing_game!
+
+      max = [outputs.length, 5].min
+    guessing_game
+    guessing_game
+    $stdin = StringIO.new
+    expect(recent_output.downcase).to match(/guess a number/)
+  end
+      expect { guessing_game }.to raise_error(NoMoreInput)
+        $stdin.string = "0\n"
+  it "should indicate too high" do
+      guessing_game
+    1000.times do
+
+  def answer
+    $stdout = StringIO.new
+    10.times do
+
+require 'io_exercises'
+    guesses.last
+  end
+  rescue NoMoreInput
+    1000.times do
+    answers = []
+  end
+    guessing_game
+  it "should ask for a guess" do
+  end
+        $stdin.string = "100\n"
+    end
+      begin
+  end
+        guessing_game
+  end
+      raise NoMoreInput unless result
+  it "should reprint guesses" do
+  end
+    expect(recent_output).to match(/#{ num_guesses }/)
+    def gets
+    expect($stdout.string.downcase).to match(/7/)
+    expect(recent_output).to match(/#{ answer }/)
+
+  before do
+    10.times do
+      $stdin.string = guesses.join("\n")
+
+        expect($stdout.string).to match(/too high/)
+
+
+      guessing_game
+describe 'guessing_game' do
+    10.times do
+
+    $stdin = STDIN
+  end
+  end
+    end
+  end
+  rescue NoMoreInput
+
+  end
+    rescue NoMoreInput
+
+    end
+
+  it "should terminate with a correct guess" do
+        guessing_game
+    $stdin.string = guesses.join("\n")
+
